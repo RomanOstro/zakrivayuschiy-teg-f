@@ -15,6 +15,54 @@
 */
 
 .page {
+  display: grid;
+  place-content: center;
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  font-family: var(--main-font);
+  font-variation-settings: 'wght' var(--font-wght);
+  background: var(--background-color);
+  color: var(--accent-color);
+  background-image: repeating-linear-gradient(
+    var(--bg-gradient-repeat-color) 0 2px, transparent 2px 4px),
+    repeating-linear-gradient( to right,
+    var(--bg-gradient-repeat-color) 0 2px, transparent 2px 4px),
+    linear-gradient(var(--bg-bottom-graadient-color-one) 0.01%, var(--bg-bottom-graadient-color-two));
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
+
+
+
+.header {
+  display:grid;
+  justify-content: center;
+  grid-template-rows: 1fr 1fr;
+  font-family: var(--accent-font);
+}
+
+.header-title-section {
+  display:grid;
+  justify-content: center;
+  gap: 20px;
+  
+}
+
+.header-title {
+  font-size: var(--header-title-font-size);
+  justify-self: center;
+}
+
+.header-subtitle {
+  font-size: var(--header-subtitle-font-size);
+  justify-self: center;
+}
+.theme-menu__button {
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+
