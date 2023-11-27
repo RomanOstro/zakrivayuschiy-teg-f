@@ -7,6 +7,21 @@
   --font-wght: 400;
   --background-color: #fff;
   --accent-color: #000;
+ 
+  --bg-image: repeating-linear-gradient(
+    var(--bg-gradient-repeat-color) 0 2px,
+    transparent 2px 4px
+  ),
+  repeating-linear-gradient(
+    to right,
+    var(--bg-gradient-repeat-color) 0 2px,
+    transparent 2px 4px
+  ),
+  linear-gradient(
+    var(--bg-bottom-graadient-color-one) 0.01%,
+    var(--bg-bottom-graadient-color-two)
+  );
+
   /* Цвета градиента bg */
   --bg-gradient-repeat-color: #d3d3d3;
   --bg-bottom-graadient-color-one: #e7e7e7;
@@ -14,4 +29,8 @@
   /* Шрифты */
   --header-title-font-size: clamp(3.0625rem, 2.4847rem + 2.4653vw, 4.0625rem);
   --header-subtitle-font-size: clamp(0.875rem, 0.55rem + 1.3867vw, 1.4375rem);
+  /* Обводка лейбла */
+  --label-shadow: -1px 0 var(--background-color), 0 -1px var(--background-color),
+    1px 0 var(--background-color), 0 1px var(--background-color);
+
 }
