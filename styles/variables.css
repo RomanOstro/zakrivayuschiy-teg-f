@@ -7,6 +7,13 @@
   --font-wght: 400;
   --background-color: #fff;
   --accent-color: #000;
+
+  --contour-like: #000;
+  --hart-hover-fill: #000;
+  --hart-active-fill: #FF0000;
+  --hart-is-like-fill: #FF0000;
+  --button-text-color: #fff;
+ 
  
   --bg-image: repeating-linear-gradient(
     var(--bg-gradient-repeat-color) 0 2px,
@@ -33,4 +40,5 @@
   --label-shadow: -1px 0 var(--background-color), 0 -1px var(--background-color),
     1px 0 var(--background-color), 0 1px var(--background-color);
 
+    
 }
