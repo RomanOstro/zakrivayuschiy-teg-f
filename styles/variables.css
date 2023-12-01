@@ -13,6 +13,8 @@
   --hart-active-fill: #FF0000;
   --hart-is-like-fill: #FF0000;
   --button-text-color: #fff;
+  --dialog-in-sz-341-357px: clamp(21.313rem, 20.96rem + 1.502vw, 22.313rem);
+  
  
  
   --bg-image: repeating-linear-gradient(

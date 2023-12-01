@@ -28,8 +28,10 @@
     --bg-gradient-repeat-color: #000;
     --bg-bottom-graadient-color-one: #007f0c;
     --bg-bottom-graadient-color-two: #004306;
-
+   
     --contour-like: #00cc14;
+    --hart-hover-fill: #00cc14;
+    --button-text-color: #00cc14;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -44,5 +46,7 @@
   --bg-bottom-graadient-color-two: #004306;
 
   --contour-like: #00cc14;
+  --hart-hover-fill: #00cc14;
+  --button-text-color: #00cc14;
   }
 }
