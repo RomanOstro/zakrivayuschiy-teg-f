@@ -450,6 +450,7 @@
   z-index: 1;
   max-inline-size: 27px;
   mix-blend-mode: difference;
+  
 }
 
 @media (width >= 1440px) {
