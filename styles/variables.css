@@ -52,6 +52,6 @@
 @media (width < 375px) {
   :root {
     --header-logo-font-size: clamp(2.813rem, 1.358rem + 7.27vw, 3.063rem);
-    --card-label-bottom: clamp(17.813rem, 5.313rem + 66.667vw, 20.938rem);
+    --card-label-bottom: clamp(17.5rem, -2.5rem + 100vw, 20.938rem);
   }
 }
