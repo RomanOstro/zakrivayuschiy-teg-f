@@ -35,6 +35,13 @@
   --button-text-color: #00cc14;
 }
 
+@media (width < 375px) {
+  :root.theme-dark {
+    --header-logo-font-size: clamp(2.688rem, 2.021rem + 4.444vw, 3.063rem);
+    --card-label-bottom: clamp(17.813rem, 5.313rem + 66.667vw, 20.938rem);
+  }
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --card-title-font-weight: 785;
