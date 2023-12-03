@@ -9,31 +9,33 @@
   --accent-color: #000;
 
   --contour-like: #000;
-  --hart-sparks-color: #FF0000;
+  --hart-sparks-color: #ff0000;
   --hart-hover-fill: #000;
-  --hart-active-fill: #FF0000;
-  --hart-is-like-fill: #FF0000;
+  --hart-active-fill: #ff0000;
+  --hart-is-like-fill: #ff0000;
   --button-text-color: #fff;
-  --dialog-inline-size: clamp(21.313rem, 20.96rem + 1.502vw, 22.313rem); /*341-357px */
+  --dialog-inline-size: clamp(
+    21.313rem,
+    20.96rem + 1.502vw,
+    22.313rem
+  ); /*341-357px */
 
   --card-label-right: clamp(0.625rem, 0.295rem + 1.408vw, 1.563rem);
   --card-label-bottom: clamp(20.938rem, 13.807rem + 30.423vw, 41.188rem);
-  
- 
- 
+
   --bg-image: repeating-linear-gradient(
-    var(--bg-gradient-repeat-color) 0 2px,
-    transparent 2px 4px
-  ),
-  repeating-linear-gradient(
-    to right,
-    var(--bg-gradient-repeat-color) 0 2px,
-    transparent 2px 4px
-  ),
-  linear-gradient(
-    var(--bg-bottom-graadient-color-one) 0.01%,
-    var(--bg-bottom-graadient-color-two)
-  );
+      var(--bg-gradient-repeat-color) 0 2px,
+      transparent 2px 4px
+    ),
+    repeating-linear-gradient(
+      to right,
+      var(--bg-gradient-repeat-color) 0 2px,
+      transparent 2px 4px
+    ),
+    linear-gradient(
+      var(--bg-bottom-graadient-color-one) 0.01%,
+      var(--bg-bottom-graadient-color-two)
+    );
 
   /* Цвета градиента bg */
   --bg-gradient-repeat-color: #d3d3d3;
@@ -45,8 +47,6 @@
   /* Обводка лейбла */
   --label-shadow: -1px 0 var(--background-color), 0 -1px var(--background-color),
     1px 0 var(--background-color), 0 1px var(--background-color);
-
-    
 }
 
 @media (width < 375px) {

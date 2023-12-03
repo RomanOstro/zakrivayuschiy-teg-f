@@ -13,7 +13,6 @@
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
 
-
 /* Анимация меню в header (theme-menu__button) */
 
 @keyframes disabled {
@@ -94,7 +93,6 @@
   transition: fill 0.1s linear;
 }
 
-
 .like-icon.is-liked .core {
   transition: fill 0.3s;
   fill: var(--hart-is-like-fill);
@@ -110,12 +108,10 @@
   fill: var(--hart-is-like-fill);
 }
 
-.like-icon.is-liked  {
+.like-icon.is-liked {
   animation: like 0.3s 0.1s ease-in alternate;
-  
 }
 
 .like-icon.is-liked .sparks {
   animation: sparks 0.3s 0.3s ease-in alternate;
 }
-

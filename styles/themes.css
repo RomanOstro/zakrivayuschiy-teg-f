@@ -18,7 +18,6 @@
   --contour-like: #000;
   --hart-hover-fill: #000;
   --button-text-color: #fff;
-  
 }
 
 :root.theme-dark {
@@ -26,14 +25,14 @@
   --card-text-font-weight: 465;
   --background-color: #000;
   --accent-color: #00cc14;
-    /* Цвета градиента bg */
-    --bg-gradient-repeat-color: #000;
-    --bg-bottom-graadient-color-one: #007f0c;
-    --bg-bottom-graadient-color-two: #004306;
-   
-    --contour-like: #00cc14;
-    --hart-hover-fill: #00cc14;
-    --button-text-color: #00cc14;
+  /* Цвета градиента bg */
+  --bg-gradient-repeat-color: #000;
+  --bg-bottom-graadient-color-one: #007f0c;
+  --bg-bottom-graadient-color-two: #004306;
+
+  --contour-like: #00cc14;
+  --hart-hover-fill: #00cc14;
+  --button-text-color: #00cc14;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -43,12 +42,12 @@
     --background-color: #000;
     --accent-color: #00cc14;
     /* Цвета градиента bg */
-  --bg-gradient-repeat-color: #000;
-  --bg-bottom-graadient-color-one: #007f0c;
-  --bg-bottom-graadient-color-two: #004306;
+    --bg-gradient-repeat-color: #000;
+    --bg-bottom-graadient-color-one: #007f0c;
+    --bg-bottom-graadient-color-two: #004306;
 
-  --contour-like: #00cc14;
-  --hart-hover-fill: #00cc14;
-  --button-text-color: #00cc14;
+    --contour-like: #00cc14;
+    --hart-hover-fill: #00cc14;
+    --button-text-color: #00cc14;
   }
 }

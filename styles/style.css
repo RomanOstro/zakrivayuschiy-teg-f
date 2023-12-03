@@ -51,7 +51,10 @@
 }
 
 .header__logo {
-  font-size: var(--header-logo-font-size, clamp(3.0625rem, 2.4847rem + 2.4653vw, 4.0625rem));
+  font-size: var(
+    --header-logo-font-size,
+    clamp(3.0625rem, 2.4847rem + 2.4653vw, 4.0625rem)
+  );
   text-align: center;
   text-transform: uppercase;
   padding-block-end: 20px;
@@ -61,7 +64,10 @@
 }
 
 .header-title {
-  font-size: var(--header-title-font-size, clamp(0.875rem, 0.55rem + 1.3867vw, 1.4375rem));
+  font-size: var(
+    --header-title-font-size,
+    clamp(0.875rem, 0.55rem + 1.3867vw, 1.4375rem)
+  );
   text-align: center;
   font-weight: var(--font-wght, 400);
   line-height: 1;
@@ -177,7 +183,10 @@
   text-transform: uppercase;
   display: block;
   right: var(--card-label-right, clamp(0.625rem, 0.295rem + 1.408vw, 1.563rem));
-  bottom: var(--card-label-bottom, clamp(20.938rem, 13.807rem + 30.423vw, 41.188rem));
+  bottom: var(
+    --card-label-bottom,
+    clamp(20.938rem, 13.807rem + 30.423vw, 41.188rem)
+  );
   text-shadow: var(--label-shadow);
   opacity: 0.5;
   mix-blend-mode: hard-light;
@@ -374,7 +383,10 @@
 }
 /* Модальное окно */
 .dialog {
-  max-inline-size: var(--dialog-inline-size, clamp(21.313rem, 20.96rem + 1.502vw, 22.313rem));
+  max-inline-size: var(
+    --dialog-inline-size,
+    clamp(21.313rem, 20.96rem + 1.502vw, 22.313rem)
+  );
   padding-block: 31px;
   padding-inline: 40px;
   background-color: var(--background-color, #fff);
@@ -417,7 +429,4 @@
 .dialog-button {
   inline-size: 100%;
   padding-block: 6px;
-
 }
-
-
