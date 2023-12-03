@@ -1,6 +1,6 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 :root {
-  --accent-font: "Press Start 2P", sans-serif;
+  --accent-font: "Press Start 2P", "fantasy";
   --main-font: "Inter-Variable", sans-serif;
   --card-title-font-weight: 700;
   --card-text-font-weight: 400;
@@ -9,11 +9,15 @@
   --accent-color: #000;
 
   --contour-like: #000;
+  --hart-sparks-color: #FF0000;
   --hart-hover-fill: #000;
   --hart-active-fill: #FF0000;
   --hart-is-like-fill: #FF0000;
   --button-text-color: #fff;
-  --dialog-in-sz-341-357px: clamp(21.313rem, 20.96rem + 1.502vw, 22.313rem);
+  --dialog-inline-size: clamp(21.313rem, 20.96rem + 1.502vw, 22.313rem); /*341-357px */
+
+  --card-label-right: clamp(0.625rem, 0.295rem + 1.408vw, 1.563rem);
+  --card-label-bottom: clamp(20.938rem, 13.807rem + 30.423vw, 41.188rem);
   
  
  
@@ -37,10 +41,19 @@
   --bg-bottom-graadient-color-two: #1a1a1a;
   /* Шрифты */
   --header-title-font-size: clamp(3.0625rem, 2.4847rem + 2.4653vw, 4.0625rem);
+
+
   --header-subtitle-font-size: clamp(0.875rem, 0.55rem + 1.3867vw, 1.4375rem);
   /* Обводка лейбла */
   --label-shadow: -1px 0 var(--background-color), 0 -1px var(--background-color),
     1px 0 var(--background-color), 0 1px var(--background-color);
 
     
+}
+
+@media (width < 375px) {
+  :root {
+    --header-title-font-size: clamp(2.688rem, 2.021rem + 4.444vw, 3.063rem);
+    --card-label-bottom: clamp(17.813rem, 5.313rem + 66.667vw, 20.938rem);
+  }
 }

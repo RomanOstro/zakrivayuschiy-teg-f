@@ -6,11 +6,8 @@
 */
 
 :root.theme-light {
-  --accent-font: "Press Start 2P", sans-serif;
-  --main-font: "Inter-Variable", sans-serif;
   --card-title-font-weight: 700;
   --card-text-font-weight: 400;
-  --font-wght: 400;
   --background-color: #fff;
   --accent-color: #000;
   /* Цвета градиента bg */

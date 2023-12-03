@@ -24,18 +24,15 @@
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-}
-.section-wrapper {
   max-inline-size: clamp(23.438rem, 16.285rem + 30.516vw, 43.75rem);
   margin: 0 auto;
 }
 
 .header {
   display: grid;
-  justify-content: center;
+  justify-items: center;
   grid-template-rows: repeat(2, min-content);
   font-family: var(--accent-font);
-  gap: 25px;
   background: var(--background-color);
   margin: 100px auto 100px;
   padding-block-start: clamp(7.5rem, 7.148rem + 1.5vw, 8.5rem);
@@ -43,21 +40,23 @@
   border: 2px solid var(--accent-color);
 }
 
-.header-title {
+.header__logo {
   font-size: var(--header-title-font-size);
   text-align: center;
   text-transform: uppercase;
   padding-block-end: 20px;
   font-weight: var(--font-wght);
   line-height: 1;
+  display: block;
 }
 
-.header-subtitle {
+.header-title {
   font-size: var(--header-subtitle-font-size);
   text-align: center;
   font-weight: var(--font-wght);
   line-height: 1;
   text-transform: uppercase;
+  padding-block-end: 25px;
 }
 
 .theme-menu {
@@ -155,6 +154,10 @@
   }
 }
 
+.card:first-of-type {
+  margin-block-end: 49px;
+}
+
 .picture-container__headering {
   font-family: var(--main-font);
   font-size: 18px;
@@ -165,8 +168,8 @@
 }
 
 .wrapper-image {
-  display: block;
   position: relative;
+  margin: 0;
 }
 /* ЛЕЙБЛ */
 .card-label {
@@ -176,12 +179,18 @@
   font-family: var(--accent-font);
   text-transform: uppercase;
   display: block;
-  right: clamp(0.625rem, 0.295rem + 1.408vw, 1.563rem);
-  top: 25px;
+  right: var(--card-label-right);
+  bottom: var(--card-label-bottom);
   text-shadow: var(--label-shadow);
   opacity: 0.5;
   mix-blend-mode: hard-light;
 }
+
+/* @media (width >= 1440px) {
+  .card-label {
+    top: 59px;
+  }
+} */
 
 .card-label.lowercase {
   text-transform: lowercase;
@@ -260,7 +269,7 @@
   gap: 5px;
 }
 
-.buttons {
+.button {
   appearance: none;
   outline: none;
   border: 2px solid var(--accent-color);
@@ -388,7 +397,7 @@
   padding: 9px 17px 7px 17px;
 }
 
-.buttons::before {
+.button::before {
   content: "";
   position: absolute;
   background-color: var(--accent-color);
@@ -401,16 +410,16 @@
   z-index: 0;
 }
 
-.buttons:hover::before {
+.button:hover::before {
   transition: scale 0.5s ease-in-out;
   scale: 1 1;
 }
 
-.buttons:focus {
+.button:focus {
   outline: none;
 }
 
-.buttons:focus-visible {
+.button:focus-visible {
   transition: box-shadow 0.3s;
   box-shadow: 2px 2px var(--accent-color);
 }
@@ -464,7 +473,7 @@
 }
 /* Модальное окно */
 .dialog {
-  max-inline-size: var(--dialog-in-sz-341-357px);
+  max-inline-size: var(--dialog-inline-size);
   padding-block: 31px;
   padding-inline: 40px;
   background-color: var(--background-color);
@@ -501,4 +510,14 @@
 .dialog-button {
   inline-size: 100%;
   padding-block: 6px;
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
 }
