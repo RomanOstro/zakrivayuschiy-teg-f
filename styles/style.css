@@ -14,12 +14,22 @@
 
 */
 
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+}
+
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  font-family: var(--main-font);
-  font-variation-settings: "wght" var(--font-wght);
-  color: var(--accent-color);
+  font-family: var(--main-font, "Inter-Variable");
+  font-variation-settings: "wght" var(--font-wght, 400);
+  color: var(--accent-color, #000);
   background-image: var(--bg-image);
   background-size: cover;
   background-position: center;
@@ -32,8 +42,8 @@
   display: grid;
   justify-items: center;
   grid-template-rows: repeat(2, min-content);
-  font-family: var(--accent-font);
-  background: var(--background-color);
+  font-family: var(--accent-font, "Press Start 2P");
+  background: var(--background-color, #fff);
   margin: 100px auto 100px;
   padding-block-start: clamp(7.5rem, 7.148rem + 1.5vw, 8.5rem);
   padding-block-end: 23px;
@@ -41,19 +51,19 @@
 }
 
 .header__logo {
-  font-size: var(--header-title-font-size);
+  font-size: var(--header-logo-font-size, clamp(3.0625rem, 2.4847rem + 2.4653vw, 4.0625rem));
   text-align: center;
   text-transform: uppercase;
   padding-block-end: 20px;
-  font-weight: var(--font-wght);
+  font-weight: var(--font-wght, 400);
   line-height: 1;
   display: block;
 }
 
 .header-title {
-  font-size: var(--header-subtitle-font-size);
+  font-size: var(--header-title-font-size, clamp(0.875rem, 0.55rem + 1.3867vw, 1.4375rem));
   text-align: center;
-  font-weight: var(--font-wght);
+  font-weight: var(--font-wght, 400);
   line-height: 1;
   text-transform: uppercase;
   padding-block-end: 25px;
@@ -103,7 +113,7 @@
 .theme-menu__button::after {
   content: "";
   position: absolute;
-  background-color: var(--accent-color);
+  background-color: var(--accent-color, #000);
   inline-size: 85%;
   block-size: 2px;
   left: 17px;
@@ -132,7 +142,7 @@
   display: flex;
   flex-direction: column;
   border: 2px solid currentColor;
-  background-color: var(--background-color);
+  background-color: var(--background-color, #fff);
   margin-block-end: 50px;
 }
 
@@ -148,10 +158,10 @@
 
 .picture-container__headering {
   font-size: 18px;
-  font-variation-settings: "wght" var(--card-title-font-weight);
+  font-variation-settings: "wght" var(--card-title-font-weight, 700);
   line-height: 1.2;
   padding: 4px 10px 6px;
-  border-bottom: 2px solid var(--accent-color);
+  border-bottom: 2px solid currentColor;
 }
 
 .wrapper-image {
@@ -161,13 +171,13 @@
 /* ЛЕЙБЛ */
 .card-label {
   position: absolute;
-  color: var(--accent-color);
+  color: var(--accent-color, #000);
   font-size: 14px;
-  font-family: var(--accent-font);
+  font-family: var(--accent-font, "Press Start 2P");
   text-transform: uppercase;
   display: block;
-  right: var(--card-label-right);
-  bottom: var(--card-label-bottom);
+  right: var(--card-label-right, clamp(0.625rem, 0.295rem + 1.408vw, 1.563rem));
+  bottom: var(--card-label-bottom, clamp(20.938rem, 13.807rem + 30.423vw, 41.188rem));
   text-shadow: var(--label-shadow);
   opacity: 0.5;
   mix-blend-mode: hard-light;
@@ -227,7 +237,7 @@
 /* Секция карточки с текстом карточки */
 .card__description-button-section {
   padding: 26px 25px 25px 25px;
-  border-top: 2px solid var(--accent-color);
+  border-top: 2px solid currentColor;
 }
 
 .card__text-block {
@@ -239,7 +249,7 @@
 .card__text-block-description {
   font-family: var(--main-font);
   font-size: 18px;
-  font-variation-settings: "wght" var(--card-text-font-weight);
+  font-variation-settings: "wght" var(--card-text-font-weight, 400);
   line-height: 1.16;
   padding-inline-end: 1px;
 }
@@ -255,12 +265,12 @@
 .button {
   appearance: none;
   outline: none;
-  border: 2px solid var(--accent-color);
+  border: 2px solid var(--accent-color, #000);
   transition: box-shadow 0.3s;
   position: relative;
   z-index: 1;
   cursor: pointer;
-  background-color: var(--background-color);
+  background-color: var(--background-color, #fff);
 }
 
 .card__icon-button {
@@ -281,7 +291,7 @@
 }
 
 .card__icon-button:focus-visible {
-  outline: 2px solid var(--accent-color);
+  outline: 2px solid currentColor;
 }
 
 /* Кнопка Like-Unlike */
@@ -294,7 +304,7 @@
 .button::before {
   content: "";
   position: absolute;
-  background-color: var(--accent-color);
+  background-color: var(--accent-color, #000);
   inset: 0;
   block-size: 100%;
   inline-size: 100%;
@@ -313,14 +323,14 @@
 }
 
 .button:focus-visible {
-  box-shadow: 2px 2px var(--accent-color);
+  box-shadow: 2px 2px currentColor;
 }
 
 .button__text {
-  color: var(--button-text-color);
-  font-family: var(--accent-font);
+  color: var(--button-text-color, #fff);
+  font-family: var(--accent-font, "Press Start 2P");
   font-size: 14px;
-  font-weight: var(--font-wght);
+  font-weight: var(--font-wght, 400);
   line-height: 0.9;
   mix-blend-mode: difference;
   position: relative;
@@ -345,7 +355,7 @@
 }
 
 .floppy-icon {
-  color: var(--button-text-color);
+  color: var(--button-text-color, #fff);
   display: block;
   position: relative;
   z-index: 1;
@@ -364,11 +374,11 @@
 }
 /* Модальное окно */
 .dialog {
-  max-inline-size: var(--dialog-inline-size);
+  max-inline-size: var(--dialog-inline-size, clamp(21.313rem, 20.96rem + 1.502vw, 22.313rem));
   padding-block: 31px;
   padding-inline: 40px;
-  background-color: var(--background-color);
-  border: 2px solid var(--accent-color);
+  background-color: var(--background-color, #fff);
+  border: 2px solid var(--accent-color, #000);
 }
 
 @media (width >= 1140px) {
@@ -389,15 +399,15 @@
 
 .dialog-floppy-icon {
   max-inline-size: 39px;
-  color: var(--accent-color);
+  color: var(--accent-color, #000);
 }
 .description-section-headering {
-  font-family: var(--accent-font);
+  font-family: var(--accent-font, "Press Start 2P");
   font-size: 14px;
-  font-weight: var(--font-wght);
+  font-weight: var(--font-wght, 400);
   line-height: 1.5;
   text-transform: uppercase;
-  color: var(--accent-color);
+  color: var(--accent-color, #000);
 }
 
 .modal-text {
@@ -407,14 +417,7 @@
 .dialog-button {
   inline-size: 100%;
   padding-block: 6px;
+
 }
 
-.visually-hidden {
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  white-space: nowrap;
-}
+

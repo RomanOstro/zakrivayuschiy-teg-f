@@ -40,10 +40,8 @@
   --bg-bottom-graadient-color-one: #e7e7e7;
   --bg-bottom-graadient-color-two: #1a1a1a;
   /* Шрифты */
-  --header-title-font-size: clamp(3.0625rem, 2.4847rem + 2.4653vw, 4.0625rem);
-
-
-  --header-subtitle-font-size: clamp(0.875rem, 0.55rem + 1.3867vw, 1.4375rem);
+  --header-logo-font-size: clamp(3.0625rem, 2.4847rem + 2.4653vw, 4.0625rem);
+  --header-title-font-size: clamp(0.875rem, 0.55rem + 1.3867vw, 1.4375rem);
   /* Обводка лейбла */
   --label-shadow: -1px 0 var(--background-color), 0 -1px var(--background-color),
     1px 0 var(--background-color), 0 1px var(--background-color);
@@ -53,7 +51,7 @@
 
 @media (width < 375px) {
   :root {
-    --header-title-font-size: clamp(2.688rem, 2.021rem + 4.444vw, 3.063rem);
+    --header-logo-font-size: clamp(2.688rem, 2.021rem + 4.444vw, 3.063rem);
     --card-label-bottom: clamp(17.813rem, 5.313rem + 66.667vw, 20.938rem);
   }
 }
