@@ -12,3 +12,110 @@
 
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
+
+
+/* Анимация меню в header (theme-menu__button) */
+
+@keyframes disabled {
+  0% {
+    left: 0;
+  }
+
+  100% {
+    left: 4px;
+  }
+}
+/* Анимация сердечка (like-icon) */
+@keyframes like {
+  0% {
+    scale: 1;
+  }
+
+  100% {
+    scale: 1.5;
+  }
+}
+
+@keyframes sparks {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Анимация like-icon */
+
+.like-icon {
+  display: block;
+  inline-size: 39px;
+  block-size: 36px;
+  margin: 0;
+  padding: 0;
+  transform-origin: 50% 50%;
+}
+
+.like-icon .core {
+  fill: transparent;
+  transition: 0.3s 0.03s;
+}
+.like-icon:hover .core {
+  transition: 0.3s linear;
+  fill: var(--hart-hover-fill);
+}
+
+.like-icon:active .core {
+  transition: 0.3s linear;
+  fill: var(--hart-active-fill);
+}
+
+.like-icon .main-body {
+  fill: transparent;
+  transition: 0.3s;
+}
+
+.like-icon:hover .main-body {
+  transition: 0.3s 0.05s linear;
+  fill: var(--hart-hover-fill);
+}
+
+.like-icon:active .main-body {
+  transition: 0.3s 0.05s linear;
+  fill: var(--hart-active-fill);
+}
+
+.like-icon .sparks {
+  opacity: 0;
+}
+
+.like-icon .contour {
+  transition: fill 0.1s linear;
+}
+
+
+.like-icon.is-liked .core {
+  transition: fill 0.3s;
+  fill: var(--hart-is-like-fill);
+}
+
+.like-icon.is-liked .main-body {
+  transition: 0.3s 0.05s;
+  fill: var(--hart-is-like-fill);
+}
+
+.like-icon.is-liked .contour {
+  transition: 0.3s 0.06s;
+  fill: var(--hart-is-like-fill);
+}
+
+.like-icon.is-liked  {
+  animation: like 0.3s 0.1s ease-in alternate;
+  
+}
+
+.like-icon.is-liked .sparks {
+  animation: sparks 0.3s 0.3s ease-in alternate;
+}
+
